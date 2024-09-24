@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: border-box;
 }
 
 body {
@@ -21,14 +22,14 @@ a {
     }
 }
 
-@keyframes show-text {
+/* @keyframes show-text {
     0% {
-        opacity: 0%;
+        font-size: 0px;
     }
     100% {
-        opacity: 100%
+        font-size: 18px;
     }
-}
+} */
 
 h1 {
     position: relative;
@@ -50,7 +51,7 @@ h2 {
     color: aliceblue;
     padding: 30%;
     padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
     font-family: "ABC Connect Unlicensed Trial", sans-serif;
     font-size: 1.5vw;
 }
@@ -64,7 +65,21 @@ p {
     line-height: 1.4em;
 }
 
-.info {
+p:active {
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.last-paragraph {
+    padding-bottom: 30vw;
+}
+
+/* .info {
     margin-top: 30px;
     position: absolute;
     left: 95%;
@@ -72,28 +87,25 @@ p {
     height: 30px;
     background-color: yellow;
     border-radius: 50%;
-}
+    color: magenta;
+    font-size: 10px;
+    font-family: "ABC Connect Unlicensed Trial", sans-serif;
+} */
 
-.info-text {
+/* .info-text {
     color: magenta;
     margin-top: 30px;
     position: absolute;
-    left: 85%;
-    display: block;
+    left: 84%;
     font-size: 18px;
-    font-family: "new-haas-unica", sans-serif;
-    opacity: 0%;
-}
+    font-family: "ABC Connect Unlicensed Trial", sans-serif;
+} */
 
-.info-text:hover {
+/* .info:hover {
     animation-name: show-text;
-    animation-duration: 50s;
+    animation-duration: 5s;
     transition: 0.2s;
-}
-
-.last-paragraph {
-    padding-bottom: 50vw;
-}
+} */
 
 .change-red {
     transition: 0.2s;
