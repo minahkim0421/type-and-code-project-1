@@ -22,14 +22,6 @@ a {
     }
 }
 
-/* @keyframes show-text {
-    0% {
-        font-size: 0px;
-    }
-    100% {
-        font-size: 18px;
-    }
-} */
 
 h1 {
     position: relative;
@@ -83,7 +75,7 @@ p:active {
     padding-bottom: 30vw;
 }
 
-/* .info {
+.info {
     margin-top: 30px;
     position: absolute;
     left: 95%;
@@ -91,25 +83,22 @@ p:active {
     height: 30px;
     background-color: yellow;
     border-radius: 50%;
-    color: magenta;
-    font-size: 10px;
-    font-family: "ABC Connect Unlicensed Trial", sans-serif;
-} */
+    z-index: 99999999;
+} 
 
-/* .info-text {
+ .info-text {
     color: magenta;
     margin-top: 30px;
-    position: absolute;
+    position: fixed;
     left: 84%;
     font-size: 18px;
     font-family: "ABC Connect Unlicensed Trial", sans-serif;
-} */
+    display: none;
+} 
 
-/* .info:hover {
-    animation-name: show-text;
-    animation-duration: 5s;
-    transition: 0.2s;
-} */
+.info:hover .info-text {
+    display: block;
+}
 
 .change-red {
     transition: 0.2s;
