@@ -75,8 +75,8 @@ p:active {
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .last-paragraph {
