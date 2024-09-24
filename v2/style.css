@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("giphy-nasa.webp");
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+@keyframes title-animation {
+    0% {
+        margin-left: -50px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+
+@keyframes show-text {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%
+    }
+}
+
+h1 {
+    position: relative;
+    padding-top: 100px;
+    color: blue;
+    text-decoration: none;
+    font-family: "ABC Connect Unlicensed Trial", sans-serif;
+    font-style: italic;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 1em;
+    animation-name: title-animation;
+    animation-iteration-count: 50;
+    animation-direction: alternate;
+    animation-duration: 8s;
+}
+
+h2 {
+    color: aliceblue;
+    padding: 30%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    font-family: "ABC Connect Unlicensed Trial", sans-serif;
+    font-size: 1.5vw;
+}
+
+p {
+    padding-left: 30%;
+    padding-right: 30%;
+    color: azure;
+    font-family: "Lora", serif;
+    font-size: 1vw;
+    line-height: 1.4em;
+}
+
+.info {
+    margin-top: 30px;
+    position: absolute;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.info-text {
+    color: magenta;
+    margin-top: 30px;
+    position: absolute;
+    left: 85%;
+    display: block;
+    font-size: 18px;
+    font-family: "new-haas-unica", sans-serif;
+    opacity: 0%;
+}
+
+.info-text:hover {
+    animation-name: show-text;
+    animation-duration: 50s;
+    transition: 0.2s;
+}
+
+.last-paragraph {
+    padding-bottom: 50vw;
+}
+
+.change-red {
+    transition: 0.2s;
+}
+
+.change-red:hover {
+    color: red;
+}
+
+.change-green {
+    transition: 0.2s;
+}
+
+.change-green:hover {
+    color: greenyellow;
+}
+
+.change-pink {
+    transition: 0.2s;
+}
+
+.change-pink:hover {
+    color: pink;
+}
