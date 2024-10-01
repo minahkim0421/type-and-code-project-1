@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Columns (No JS)</title>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .container {
+        display: flex;
+        width: 90%;
+        height: 80vh;
+        gap: 10px;
+    }
+    
+    .column {
+        flex: 1;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        transition: flex-grow 0.3s ease-in-out;
+        position: relative;
+    }
+    
+    .column:hover {
+        flex-grow: 6;
+    }
+    
+    .vertical-headline {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        width: 50px;
+        height: 100%;
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .column:hover .vertical-headline {
+        width: 80px;
+    }
+    
+    .content {
+        padding: 20px;
+        flex: 1;
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    }
+    
+    .column:hover .content {
+        opacity: 1;
+        max-height: 1000px; /* Arbitrary large value to ensure visibility */
+    }
+    
+    p {
+        font-size: 16px;
+        color: #333;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="vertical-headline">Chapter 1</div>
+            <div class="content">
+                <p>This is the content for Chapter 1. Hover to expand.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="vertical-headline">Chapter 2</div>
+            <div class="content">
+                <p>This is the content for Chapter 2. Hover to expand.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="vertical-headline">Chapter 3</div>
+            <div class="content">
+                <p>This is the content for Chapter 3. Hover to expand.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="vertical-headline">Chapter 4</div>
+            <div class="content">
+                <p>This is the content for Chapter 4. Hover to expand.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="vertical-headline">Chapter 5</div>
+            <div class="content">
+                <p>This is the content for Chapter 5. Hover to expand.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="vertical-headline">Chapter 6</div>
+            <div class="content">
+                <p>This is the content for Chapter 6. Hover to expand.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

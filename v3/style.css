@@ -1,0 +1,204 @@
+/* this website was mainly inspired by the brick-barrier.html sample
+from the test-project-1.html website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* flex box properties */
+.initial-block {
+    display: flex;
+    max-width: 40vw;
+    min-height: 2vw;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 36px;
+}
+.flex-parent {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    width: 100vw;
+    height: 100vh;
+}
+.flex-child {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    scrollbar-width: none;
+    overflow-y: auto;
+
+    padding: 20px 0 0 20px;
+    border: 1px solid black;
+    min-width: 100px;
+
+    font-size: 5em;
+    transition: flex-grow .5s;
+}
+.flex-child:hover {
+    flex-grow: 10;
+}
+
+/* this section: credit goes to chat gpt.
+the file that chat gpt gave me is named as test.html*/
+.flex-child:hover .h1 {
+    width: 10rem;
+}
+.flex-child:hover .pp {
+    opacity: 1;
+    max-height: 4000px;
+}
+/* section end */
+.flex-child img {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    max-height: 500px;
+    object-fit: cover;
+    z-index: 0;
+}
+.overlap {
+    opacity: 0;
+    transition: 0.5s;
+    /* z-index: 999; */
+}
+.flex-child .pp:hover {
+    .overlap {
+        font-size: 24px;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 80%;
+        left: 20%;
+        opacity: 1;
+    }
+}
+
+.two-line {
+    min-width: 200px;
+    overflow-y: auto;
+}
+
+/* font & paragraph styles */
+.h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* this section: credit goes to chat gpt.
+the file that chat gpt gave me is named as test.html*/
+    width: 2rem;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    /* section end */
+}
+.pp {
+    flex: 1;
+    flex-direction: column;
+    padding: 100px;
+    border: none;
+    padding-left: 30px;
+    gap: 50px;
+
+    /* font-family: "Archivo", sans-serif; */
+    font-size: 0.2em;
+    line-height: 1.5em;
+
+    /* this section: credit goes to chat gpt.
+the file that chat gpt gave me is named as test.html*/
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    /* section end */
+}
+h1 {
+    font-size: 5em;
+    writing-mode: vertical-rl;
+}
+.archivo-normal {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1em;
+}
+.archivo-small {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 0.4em;
+    writing-mode: vertical-rl;
+}
+.montserrat-body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* For different browser sizes */
+@media only screen and (max-width: 1000px) {
+    .flex-parent {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .flex-child {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        font-size: 4.2em;
+    }
+    h1 {
+        writing-mode: horizontal-tb;
+        text-orientation: unset;
+        width: 100%;
+        padding-left: 15px;
+        min-height: 50px;
+    }
+    .pp {
+        flex-direction: row;
+        font-size: 0.25em;
+        scrollbar-width: none;
+        overflow-y: auto;
+    }
+    .two-line {
+        min-height: 170px;
+        overflow-y: auto;
+    }
+    .archivo-small {
+        writing-mode: horizontal-tb;
+        text-orientation: unset;
+    }
+    .flex-child .pp:hover {
+        .overlap {
+            opacity: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 4000px) {
+    .pp {
+        flex-direction: row;
+    }
+}
