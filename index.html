@@ -4,18 +4,142 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Type + Code Project 1</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		p {
+			font-size: 1em;
+			font-family: "IBM Plex Mono", monospace;
+			font-weight: 400;
+			font-style: normal;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+			width: 100vw;
+			height: 70vh;
+			place-items: center;
+			gap: 10px;
+		}
+		.grid-children {
+			padding-left: 25%;
+			place-items: center;
+		}
+		.grid-children img {
+			object-position: 50% 50%;
+			object-fit: scale-down;
+		}
+		.grid-children:hover {
+			cursor: grab;
+		}
+		.title {
+			grid-column-start: 3;
+			grid-row-start: 3;
+		}
+		.title img {
+			max-width: 40vw;
+			max-height: 50vh;
+		}
+		.name {
+			grid-column-start: 3;
+			grid-row-start: 4;
+		}
+		.name img {
+			max-width: 15vw;
+			max-height: 20vh;
+		}
+		.content1 {
+			grid-column-start: 2;
+			grid-row-start: 6;
+		}
+		.content1 img {
+			max-width: 15vw;
+			max-height: 15vh;
+		}
+		.content2 {
+			grid-column-start: 3;
+			grid-row-start: 6;
+		}
+		.content2 img {
+			max-width: 15vw;
+			max-height: 15vh;
+		}
+		.content3 {
+			grid-column-start: 4;
+			grid-row-start: 6;
+		}
+		.content3 img {
+			max-width: 15vw;
+			max-height: 15vh;
+		}
+		.content4 {
+			grid-column-start: 5;
+			grid-row-start: 6;
+		}
+		.content4 img {
+			max-width: 15vw;
+			max-height: 15vh;
+		}
+
+		.ibm-plex-mono-regular {
+			font-family: "IBM Plex Mono", monospace;
+			font-weight: 400;
+			font-style: normal;
+}
+	</style>
 </head>
 <body>
-	
-	<h1>Type + Code Project 1</h1>
-	<h2>Minah Kim</h2>
+<div class="grid-container">
+	<h1 class="grid-children title">
+		<!-- Type + Code Project 1 -->
+		<img src="assets/class-title.png" class="title-image">
+	</h1>
+	<h2 class="grid-children name">
+		<img src="assets/namecard.png">
+	</h2>
 
-	<ul>
-		<li><a href="https://www.scientificamerican.com/article/what-is-synesthesia/" target="_blank">Link to the original article</a></li>
-		<li><a href="v1/">Version 1</a></li>
-		<li><a href="v2/">Version 2</a></li>
-		<li><a href="v3/">Version 3</a></li>
-	</ul>
+	<div class="grid-children content1">
+		<a href="https://www.scientificamerican.com/article/what-is-synesthesia/">
+			<img src="assets/file-link.png">
+		</a>
+		<br>
+		<p>
+			Link to the original article
+		</p>
+	</div>
+
+	<div class="grid-children content2">
+		<a href="v1/">
+			<img src="assets/folder-icon.png">
+		</a>
+		<p>
+			Version 1
+		</p>
+	</div>
+
+	<div class="grid-children content3">
+		<a href="v2/">
+			<img src="assets/folder-icon.png">
+		</a>
+		<p>Version 2</p>
+	</div>
+
+	<div class="grid-children content4">
+		<a href="v3/">
+			<img src="assets/folder-icon.png">
+		</a>
+		<p>Version 3</p>
+	</div>
+</div>
 
 </body>
 </html>
