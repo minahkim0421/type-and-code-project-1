@@ -174,7 +174,6 @@ h1 {
         text-orientation: unset;
         width: 100%;
         padding-left: 15px;
-        /* min-height: 50px; */
     }
     .pp {
         flex-direction: row;
