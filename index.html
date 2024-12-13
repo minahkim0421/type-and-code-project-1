@@ -14,7 +14,6 @@
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
-			/* cursor: url(assets/cursor_Ex.png), auto; */
 		}
 		p {
 			font-size: 1em;
@@ -95,6 +94,38 @@
 			font-family: "IBM Plex Mono", monospace;
 			font-weight: 400;
 			font-style: normal;
+		}
+
+		@media screen and (max-width: 800px) {
+			.grid-container {
+				grid-template-columns: 1fr;
+			}
+			.grid-children {
+				padding-left: 0;
+			}
+			.title {
+				grid-column-start: 1;
+				grid-row-start: 3;
+			}
+			.name {
+				grid-column-start: 1;
+				grid-row-start: 4;
+			}
+			.content1 {
+				grid-column-start: 1;
+			}
+			.content2 {
+				grid-column-start: 1;
+				grid-row-start: 7;
+			}
+			.content3 {
+				grid-column-start: 1;
+				grid-row-start: 8;
+			}
+			.content4 {
+				grid-column-start: 1;
+				grid-row-start: 9;
+			}
 		}
 	</style>
 </head>

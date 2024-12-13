@@ -46,7 +46,7 @@ h2 {
     padding-top: 50px;
     padding-bottom: 120px;
     font-family: "ABC Connect Unlicensed Trial", sans-serif;
-    font-size: 1.5vw;
+    font-size: calc(10px + 1.2vw);
 }
 
 p {
@@ -54,7 +54,7 @@ p {
     padding-right: 30%;
     color: azure;
     font-family: "Lora", serif;
-    font-size: 1vw;
+    font-size: calc(8px + 0.8vw);
     line-height: 1.4em;
 }
 
